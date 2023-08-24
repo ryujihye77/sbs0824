@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>탭스형패널</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            margin: 20px;
+            padding: 20px;
+            text-align: left;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            color: #fff;
+            background: #f1f1f1;
+
+        }
+        nav{
+            margin-top: 25px;
+
+        }
+        ul{
+            list-style: none;
+            float: none;
+            width: 650px;
+            text-align: left;
+            position: relative;
+        }
+        li{
+            display:block;
+            float:left;
+        }    
+        
+        li input[type="radio"]{
+            position: absolute;
+            left: -9999px;
+
+        }
+
+        label{
+            padding: 12px 18px;
+            font-size: 15px;
+            background: #ccc;
+            cursor: pointer;
+            border-radius: 6px 6px 0 0;
+            transition: 0.5s;
+
+        }
+
+        label:hover{
+            background: #8ac007;
+        }
+        
+
+       .content{
+         display: none;
+         position: absolute;
+         left: 0;
+         top: 25px;
+         padding: 25px;
+         width: 100%;
+         overflow: hidden;
+         font-size: 14px;
+         border-radius: 0 9px 0 0;
+         background: #8ac007;
+
+       }
+       nav input[type=radio]:checked + label{
+           padding: 18px;
+           background: #8ac007;
+       }
+       nav input[type=radio]:checked~ .content{
+         display: block;
+       }
+       
+    </style>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800">
+    <link rel="stylesheet" href="css/style.css">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- http://designscrazed.org/html5-css3-accordion-tabs/ -->
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Pure CSS Horizontal Tabs</h1>
+        <nav>
+            <ul>
+                <li>
+                    <input type="radio" name="tabs" id="tab1" checked>
+                    <label for="tab1">learn JavaScript</label>
+                    <div id="tab-content1" class="content">
+                        <p>
+                            JavaScript is the programming language of HTML and the Web.<br>
+                            Programming makes computers do what you want them to do.<br>
+                            JavaScript is easy to learn.<br>
+                            This tutorial will teach you JavaScript from basic to advanced.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <input type="radio" name="tabs" id="tab2">
+                    <label for="tab2">learn jQuery</label>
+                    <div id="tab-content2" class="content">
+                        <p>
+                            jQuery is a JavaScript Library.<br>
+                            jQuery greatly simplifies JavaScript programming.<br>
+                            jQuery is easy to learn.
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>
